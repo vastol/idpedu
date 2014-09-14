@@ -18,7 +18,7 @@ createAB <- function(infile) {
   img = system.file("rmarkdown/templates/aufgabe/resources/logo.jpg", package = "idpedu")
   template <-  system.file(
     "rmarkdown/templates/aufgabe/resources/template.tex", 
-    package = "wast"
+    package = "idpedu"
   )
   
   # Creating new directory and copying all the stuff into that directory
