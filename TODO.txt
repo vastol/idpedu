@@ -1,0 +1,17 @@
+Zu tun
+
+* Das Ganze auf github stellen
+* Umlaute in der Form "u oder \"u scheinen nicht zu gehen
+
+Done
+* Bild-IDP einfügen
+* Umlaute gehen in knitr allerdings nicht im Skript (scheint zu gehen)
+
+# Bugs (nicht von mir)
+
+Fancy header scheint nicht zu gehen, wenn R code eingebetter wird:
+  a) Sollte a) sein
+  a) Sollte b) sein tut's aber nicht wenn R code kommt
+
+
+

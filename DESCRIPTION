@@ -1,0 +1,10 @@
+Package: idpedu
+Type: Package
+Title: Utilities for Wast
+Version: 0.1
+Date: 2014-09-10
+Author: oliver duerr
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: More about what it does (maybe more than one line)
+License: LGPL
+Depends: R (>= 3.0)
