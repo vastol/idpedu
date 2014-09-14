@@ -12,10 +12,10 @@ createAB <- function(infile) {
   infile = normalizePath(infile) #We need the absolute path
   baseDir = dirname(infile)
     
-  header_lsg =  system.file("rmarkdown/templates/aufgabe/skeleton/header_lsg.tex", package = "wast")
-  header_nolsg =  system.file("rmarkdown/templates/aufgabe/resources/header_nolsg.tex", package = "wast")
-  before_body_img = system.file("rmarkdown/templates/aufgabe/resources/before_body_img.tex", package = "wast")
-  img = system.file("rmarkdown/templates/aufgabe/resources/logo.jpg", package = "wast")
+  header_lsg =  system.file("rmarkdown/templates/aufgabe/skeleton/header_lsg.tex", package = "idpedu")
+  header_nolsg =  system.file("rmarkdown/templates/aufgabe/resources/header_nolsg.tex", package = "idpedu")
+  before_body_img = system.file("rmarkdown/templates/aufgabe/resources/before_body_img.tex", package = "idpedu")
+  img = system.file("rmarkdown/templates/aufgabe/resources/logo.jpg", package = "idpedu")
   template <-  system.file(
     "rmarkdown/templates/aufgabe/resources/template.tex", 
     package = "wast"

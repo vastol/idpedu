@@ -6,9 +6,9 @@
 createAB.old <- function(infile) {
   library(rmarkdown)
   library(tools)
-  header_lsg =  system.file("rmarkdown/templates/aufgabe/skeleton/header_lsg.tex", package = "wast")
-  header_nolsg =  system.file("rmarkdown/templates/aufgabe/resources/header_nolsg.tex", package = "wast")
-  before_body = system.file("rmarkdown/templates/aufgabe/resources/before_body.tex", package = "wast")
+  header_lsg =  system.file("rmarkdown/templates/aufgabe/skeleton/header_lsg.tex", package = "idpedu")
+  header_nolsg =  system.file("rmarkdown/templates/aufgabe/resources/header_nolsg.tex", package = "idpedu")
+  before_body = system.file("rmarkdown/templates/aufgabe/resources/before_body.tex", package = "idpedu")
   
   inc = includes(before_body = before_body, in_header = header_lsg)
   lsg <- TRUE
