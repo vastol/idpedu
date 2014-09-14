@@ -10,4 +10,4 @@ To install the packages
   library(idpedu)
 ```
 
-Auch was gemacht.
+Komplet geloescht
