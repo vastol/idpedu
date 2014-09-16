@@ -3,6 +3,9 @@
 #' Creates a "Arbeitsblatt" with and without solution from a Rmd-file
 #'
 #' @param infile the rmarkdown description file
+#
+#
+#
 createAB.old <- function(infile) {
   library(rmarkdown)
   library(tools)
@@ -10,7 +13,7 @@ createAB.old <- function(infile) {
   header_nolsg =  system.file("rmarkdown/templates/aufgabe/resources/header_nolsg.tex", package = "idpedu")
   before_body = system.file("rmarkdown/templates/aufgabe/resources/before_body.tex", package = "idpedu")
   
-  inc = includes(before_body = before_body, in_header = header_lsg)
+  inc = includes(before_body = before_body, in_header = header_lsg) 
   lsg <- TRUE
   output_file_base = basename(file_path_sans_ext(infile))
   render(input = infile, pdf_document(includes = inc), output_file = paste0(output_file_base, "_lsg.pdf"), encoding = "UTF-8")
