@@ -1,11 +1,21 @@
 Zu tun
 
-* Das Ganze auf github stellen
-* Umlaute in der Form "u oder \"u scheinen nicht zu gehen
+* Umlaute in der Form "u (\"u tut's)
+* Mal https://github.com/stevenpollack/ucbthesis ansehen. Insbesondere den worklow:
+.Rmd
+  \
+   ----- knitr ---> .md
+                    /
+.tex <-- pandoc ---
+ \
+ xelatex + biber 
+            \
+             --> .pdf
 
 Done
+* Das Ganze auf github stellen
 * Bild-IDP einfügen
-* Umlaute gehen in knitr allerdings nicht im Skript (scheint zu gehen)
+* Umlaute gehen in knitr allerdings nicht im Skript (scheint doch zu gehen)
 
 # Bugs (nicht von mir)
 
