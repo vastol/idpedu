@@ -14,13 +14,11 @@ createAnkreuzBlatt <- function(infile, output_file, header, name) {
     
     print(paste0("  Creating temporary files in ", td))
     name.title = paste0("\\section*{", name, "}")
-    df <- read.delim2(file, header = FALSE, stringsAsFactors = FALSE)
+    df <- read.delim2(infile, header = FALSE, stringsAsFactors = FALSE)
     names <- df[,1]
     anz.vorgerechet <- df[,2]
     library(xtable)    
     library(rmarkdown)
-    rownames(df.out) <- names
-    colnames(df.out) <- header   
     str = paste(
       "\\documentclass[a4paper]{article}",
       "\\usepackage[a4paper]{geometry}",
@@ -53,6 +51,7 @@ createAnkreuzBlatt <- function(infile, output_file, header, name) {
 #' Picks a student by random from a file containing the student names and how often they have shown their solution
 #' @param infile the file containing the names and how often they have shown their solution
 randomPick <- function (infile) {
+  df <- read.delim2(infile, header = FALSE, stringsAsFactors = FALSE)
   names <- df[,1]
   anz.vorgerechet <- df[,2]
   p <- (1 /(anz.vorgerechet + 1)) ^ 4 
