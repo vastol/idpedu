@@ -17,14 +17,14 @@
 #' 
 #' To create a list of file one might use
 #'  files = list.files(path='V:/tolk/Private/PROJECT 02 O. DUERR/TEST FILES',pattern = "HA0[1-2].Rmd")
-mergeRMDFiles = function(dir = ".",title=".", files) {
+mergeRMDFiles = function(dir = ".",title=".", files, mergedFileName = "book.Rmd") {
        book_header = paste("---\ntitle:",title, "\n---")
        old = setwd(dir)
        
-       if(length(grep("book.Rmd", list.files())) > 0){
-          warning("book.Rmd already exists")
-       }
-       write(book_header, file = "book.Rmd")
+       if (file.exists(mergedFileName)) {
+          warning(paste0(mergedFileName, " already exists"))
+       } 
+       write(book_header, file = mergedFileName)
        
        # Introduce Aufgabe names
        task.names=paste0("##Aufgabe ", 1:length(files))
@@ -45,7 +45,7 @@ mergeRMDFiles = function(dir = ".",title=".", files) {
              # text[length(text)+1]="keep(lsg,baseDir,sure=T)"
              # TODO: tolk pls make the baseDir pointing to the directory the file came from. Before the main text comes
              text[length(text)+1]="```"                  
-             write(text, sep = "\n", file = "book.Rmd", append = T) # sep = "\n" for newline sepation
+             write(text, sep = "\n", file = mergedFileName, append = T) # sep = "\n" for newline sepation
          }
          # Render the input file to the specified output format using pandoc        
          # render("book.Rmd", output_format = "pdf_document")
