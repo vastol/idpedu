@@ -21,6 +21,7 @@ mergeRMDFiles = function(dir = ".",title=".", files, mergedFileName = "book.Rmd"
        book_header = paste("---\ntitle:",title, "\n---")
        old = setwd(dir)
        
+       #TODO tolk make option to print out filepathes
        if (file.exists(mergedFileName)) {
           warning(paste0(mergedFileName, " already exists"))
        } 
