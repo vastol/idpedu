@@ -1,5 +1,13 @@
+
+# library(devtools)
+# install_github("Oliver4242/idpedu")
+# library(idpedu)
+
+
 if (FALSE) {
-  mergeRMDFiles(dir = "~/tmp/", title = "Test", files = c("~/tmp/testMerge/HA01.Rmd", "~/tmp/testMerge/HA02.Rmd"), mergedFileName = "book1.Rmd")
-  createAB("~/tmp/book.Rmd")
+  mergeRMD(dir = "V:/tolk/Private/PROJECT 02 O. DUERR/TEST FILES 2", 
+                title = "Test", files = c("V:/tolk/Private/PROJECT 02 O. DUERR/TEST FILES 2/HA01.Rmd", 
+                                          "V:/tolk/Private/PROJECT 02 O. DUERR/TEST FILES 2/HA02.Rmd"), mergedFileName = "book1.Rmd")
+  createAB("V:/tolk/Private/PROJECT 02 O. DUERR/TEST FILES 2/book1.Rmd")
 }
 
