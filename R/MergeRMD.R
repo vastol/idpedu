@@ -43,7 +43,7 @@ mergeRMDFiles = function(dir = ".",title=".", files) {
              # to avoid variable conflict across files
              text[length(text)+1]="```{r, echo=FALSE, eval=TRUE}"
              text[length(text)+1]="keep(lsg,baseDir,sure=T)"
-             # TODO tolk pls make the baseDir pointing to the directory the file came from
+             # TODO: tolk pls make the baseDir pointing to the directory the file came from
              text[length(text)+1]="```"
                       
              write(text, sep = "\n", file = "book.Rmd", append = T) # sep = "\n" for newline sepation
