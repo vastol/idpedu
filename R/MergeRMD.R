@@ -3,7 +3,6 @@
 # install.packages('miscTools') # package for insertRow function
 
 # library(rmarkdown)
-# library(gdata)
 # library('miscTools')
 
 # setwd('V:/tolk/Private/PROJECT 02 O. DUERR/TEST FILES')
@@ -17,7 +16,7 @@
 #' @param files a list of files containing the rmd-files which will be merged
 #' 
 #' To create a list of file one might use
-#  files = list.files(path='V:/tolk/Private/PROJECT 02 O. DUERR/TEST FILES',pattern = "HA0[1-2].Rmd")
+#'  files = list.files(path='V:/tolk/Private/PROJECT 02 O. DUERR/TEST FILES',pattern = "HA0[1-2].Rmd")
 mergeRMDFiles = function(dir = ".",title=".", files) {
        book_header = paste("---\ntitle:",title, "\n---")
        old = setwd(dir)
@@ -42,12 +41,11 @@ mergeRMDFiles = function(dir = ".",title=".", files) {
              # Delete all variables except lsg and baseDir 
              # to avoid variable conflict across files
              text[length(text)+1]="```{r, echo=FALSE, eval=TRUE}"
-             text[length(text)+1]="keep(lsg,baseDir,sure=T)"
-             # TODO: tolk pls make the baseDir pointing to the directory the file came from
-             text[length(text)+1]="```"
-                      
+             # TODO: tolk, dueo remove or check why package not availibe
+             # text[length(text)+1]="keep(lsg,baseDir,sure=T)"
+             # TODO: tolk pls make the baseDir pointing to the directory the file came from. Before the main text comes
+             text[length(text)+1]="```"                  
              write(text, sep = "\n", file = "book.Rmd", append = T) # sep = "\n" for newline sepation
-             
          }
          # Render the input file to the specified output format using pandoc        
          # render("book.Rmd", output_format = "pdf_document")
